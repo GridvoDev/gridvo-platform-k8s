@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zipkin-dependencies
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zipkin-dependencies
+    spec:
+      containers:
+      - name: zipkin-dependencies
+        image: 10.0.2.62:5000/openzipkin/zipkin-dependencies
+        imagePullPolicy: Always
+        command:
+           - crond
+        args:
+           - -f
+        env:
+        - name: STORAGE_TYPE
+          value: cassandra
+        - name: CASSANDRA_CONTACT_POINTS
+          value: 169.169.0.10:9042

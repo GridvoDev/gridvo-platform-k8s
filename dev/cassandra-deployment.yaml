@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cassandra
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cassandra
+    spec:
+      containers:
+      - name: cassandra
+        image: 10.0.2.62:5000/openzipkin/zipkin-cassandra:1.18.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9042

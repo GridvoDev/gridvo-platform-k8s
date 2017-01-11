@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: zipkin
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zipkin
+    spec:
+      containers:
+      - name: zipkin
+        image: 10.0.2.62:5000/openzipkin/zipkin:1.18.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9410
+        - containerPort: 9411
+        env:
+        - name: STORAGE_TYPE
+          value: cassandra
+        - name: CASSANDRA_CONTACT_POINTS
+          value: 169.169.0.10:9042
