@@ -12,6 +12,7 @@ spec:
       containers:
       - name: kafka
         image: 10.0.2.62:5000/wurstmeister/kafka:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 9092
         - containerPort: 9093

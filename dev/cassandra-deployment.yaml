@@ -11,6 +11,7 @@ spec:
     spec:
       containers:
       - name: cassandra
-        image: 10.0.2.62:5000/openzipkin/zipkin-cassandra:1.18.0
+        image: 10.0.2.62:5000/openzipkin/zipkin-cassandra:1.19.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 9042

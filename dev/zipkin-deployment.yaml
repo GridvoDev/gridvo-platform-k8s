@@ -11,7 +11,8 @@ spec:
     spec:
       containers:
       - name: zipkin
-        image: 10.0.2.62:5000/openzipkin/zipkin:1.18.0
+        image: 10.0.2.62:5000/openzipkin/zipkin:1.19.0
+        imagePullPolicy: Always
         ports:
         - containerPort: 9410
         - containerPort: 9411
