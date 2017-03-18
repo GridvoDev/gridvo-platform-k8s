@@ -10,7 +10,7 @@ spec:
   selector: 
 #    app: cassandra
     name: cassandra
-#  clusterIP: 169.169.0.10
+  clusterIP: 169.169.0.10
   ports:
      - port: 9042
        targetPort: 9042

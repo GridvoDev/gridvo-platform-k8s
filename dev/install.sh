@@ -11,10 +11,11 @@ if [ "$?" == "1" ];then
 else
 	echo "mongodb-service is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get svc | grep -q mongodb
-done
+#kubectl -n gridvo get svc | grep -q mongodb
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get svc | grep -q mongodb
+#done
 kubectl -n gridvo get svc | grep -q cassandra
 if [ "$?" == "1" ];then
         kubectl create -f cassandra-service.yaml --record
@@ -27,10 +28,11 @@ if [ "$?" == "1" ];then
 else
     	echo "cassandra-service is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get svc | grep -q cassandra
-done
+#kubectl -n gridvo get svc | grep -q cassandra
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get svc | grep -q cassandra
+#done
 kubectl -n gridvo get svc | grep -q zookeeper
 if [ "$?" == "1" ];then
         kubectl create -f zookeeper-service.yaml --record
@@ -43,10 +45,11 @@ if [ "$?" == "1" ];then
 else
     	echo "zookeeper-service is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get svc | grep -q zookeeper
-done
+#kubectl -n gridvo get svc | grep -q zookeeper
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get svc | grep -q zookeeper
+#done
 kubectl -n gridvo get svc | grep -q kafka
 if [ "$?" == "1" ];then
         kubectl create -f kafka-service.yaml --record
@@ -59,10 +62,11 @@ if [ "$?" == "1" ];then
 else
     	echo "kafka-service is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get svc | grep -q kafka
-done
+#kubectl -n gridvo get svc | grep -q kafka
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get svc | grep -q kafka
+#done
 kubectl -n gridvo get svc | grep -q zipkin
 if [ "$?" == "1" ];then
         kubectl create -f zipkin-service.yaml --record
@@ -75,10 +79,11 @@ if [ "$?" == "1" ];then
 else
     	echo "zipkin-service is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get svc | grep -q zipkin
-done
+#kubectl -n gridvo get svc | grep -q zipkin
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get svc | grep -q zipkin
+#done
 kubectl -n gridvo get pods | grep -q mongodb
 if [ "$?" == "1" ];then
         kubectl create -f mongodb-deployment.yaml --record
@@ -91,10 +96,11 @@ if [ "$?" == "1" ];then
 else
     	echo "mongodb-deployment is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get pods | grep -q mongodb
-done
+#kubectl -n gridvo get pods | grep -q mongodb
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get pods | grep -q mongodb
+#done
 kubectl -n gridvo get pods | grep -q cassandra
 if [ "$?" == "1" ];then
         kubectl create -f cassandra-deployment.yaml --record
@@ -107,10 +113,11 @@ if [ "$?" == "1" ];then
 else
     	echo "cassandra-deployment is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get pods | grep -q cassandra
-done
+#kubectl -n gridvo get pods | grep -q cassandra
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get pods | grep -q cassandra
+#done
 kubectl -n gridvo get pods | grep -q zookeeper
 if [ "$?" == "1" ];then
         kubectl create -f zookeeper-deployment.yaml --record
@@ -123,10 +130,11 @@ if [ "$?" == "1" ];then
 else
     	echo "zookeeper-deployment is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get pods | grep -q zookeeper
-done
+#kubectl -n gridvo get pods | grep -q zookeeper
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get pods | grep -q zookeeper
+#done
 kubectl -n gridvo get pods | grep -q kafka
 if [ "$?" == "1" ];then
         kubectl create -f kafka-deployment.yaml --record
@@ -139,10 +147,11 @@ if [ "$?" == "1" ];then
 else
     	echo "kafka-deployment is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get pods | grep -q kafka
-done
+#kubectl -n gridvo get pods | grep -q kafka
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get pods | grep -q kafka
+#done
 kubectl -n gridvo get pods | grep -q zipkin
 if [ "$?" == "1" ];then
         kubectl create -f zipkin-deployment.yaml --record
@@ -155,10 +164,11 @@ if [ "$?" == "1" ];then
 else
     	echo "zipkin-deployment is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get pods | grep -q zipkin
-done
+#kubectl -n gridvo get pods | grep -q zipkin
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get pods | grep -q zipkin
+#done
 kubectl -n gridvo get pods | grep -q zipkin-dependencies
 if [ "$?" == "1" ];then
         kubectl create -f zipkin_dependencies-deployment.yaml --record
@@ -171,8 +181,9 @@ if [ "$?" == "1" ];then
 else
     	echo "zipkin_dependencies-deployment is exist!"
 fi
-while [ "$?" == "1" ]
-do
-kubectl -n gridvo get pods | grep -q zipkin
-done
-echo "everything is ok!"
+#kubectl -n gridvo get pods | grep -q zipkin-dependencies
+#while [ "$?" == "1" ]
+#do
+#kubectl -n gridvo get pods | grep -q zipkin-dependencies
+#done
+#echo "everything is ok!"
