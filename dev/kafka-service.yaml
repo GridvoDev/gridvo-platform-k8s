@@ -10,7 +10,7 @@ spec:
   selector: 
 #    app: kafka
     name: kafka
-  clusterIP: 169.169.0.9
+#  clusterIP: 169.169.0.9
   ports:
   - name: "9092"
     port: 9092
