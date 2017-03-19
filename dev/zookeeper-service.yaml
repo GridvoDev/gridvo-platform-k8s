@@ -10,7 +10,7 @@ spec:
   selector: 
 #    app: zookeeper
     name: zookeeper
-  clusterIP: 169.169.0.8
+#  clusterIP: 169.169.0.8
   ports:
      - port: 2181
        targetPort: 2181
